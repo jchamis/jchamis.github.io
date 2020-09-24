@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  max-width: auto;
+  max-height: auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    'header-container'
+    'nav-bar'
+    'scripts-container'
+    'contact-container';
+  margin: 5%;
+  background-color: #1B1B1B;
+  box-shadow: 0px 0px 10px 10px black;
+}
+
+/* Button Styles*/
+.btn {
+    border-radius: .3rem;
+    border: none;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #4d4d4d;
+    color: white;
+    text-shadow:2px 2px 4px #000000;
+    transform: scale(1.1);
+}
+
+.nav-btn {
+    background: none;
+    color: #f5f5f5;
+    text-shadow: 0rem 0rem 1rem #1B1B1B;
+    margin-left: 1rem;
+}
+
+.nav-btn:hover{
+    background-color: transparent;
+}
+
+/*Header, contains bio, titles, and image of self*/
+#header-container {
+    display: grid;
+    max-width: auto;
+    max-height: 100%;
+    padding: 2rem;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    'short-info-container image-container';
+    background-color: #f5f5f5;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/*Contains titles, bio, logo*/
+#short-info-container{
+    display: grid;
+    grid-template-rows: .75fr .75fr 6fr;
+    grid-template-columns: 25% 75%;
+    grid-template-areas:
+    'logo-image    name-title         '
+    'logo-image    screenwriter-title '
+    'about-me-hook about-me-hook      ';
+}
+
+#logo-image{
+    grid-area: logo-image;
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+}
+
+#name-title{
+    grid-area: name-title;
+    align-self: center;
+    justify-self: center;
+    font-size: 3rem;
+    font-family: 'IM Fell English', serif;
+    color: #1B1B1B;
+    text-shadow: 1px 1px 1px #8A0303;
+}
+
+#screenwriter-title{
+    grid-area: screenwriter-title;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+    font-family: 'Creepster', cursive;
+    color: #8A0303;
+    text-shadow: 1px 1px 1px #1B1B1B;
+    padding-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+#about-me-hook {
+    grid-area: about-me-hook;
+    font-size: 1.3rem;
+    font-family: 'Special Elite', cursive;
+    margin-top: 2rem;
+}
+
+/*Contains image of self*/
+#image-container {
+    justify-self: center;
+}
+
+#self-image {
+    border-radius: 50%;
+    border: .5rem solid #1B1B1B;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Contains nav bar buttons*/
+#nav-bar {
+    background-color: #8A0303;
+    padding: 1rem;
+}
+
+/*Contains script titles, script pictures, accolades*/
+#scripts-container {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    'caging-the-gods-title hershells-hill-title night-stocker-title satans-pride-title'
+    'caging-the-gods-img   hershells-hill-img   night-stocker-img   satans-pride-img';
+}
+
+.script-img {
+    width: 100%;
+    height: 100%;
+}
+
+.hershells-hill-img {
+    grid-area: hershells-hill-img;
+}
+
+.night-stocker-img {
+    grid-area: night-stocker-img;
+}
+
+.satans-pride-img {
+    grid-area: satans-pride-img;
+}
