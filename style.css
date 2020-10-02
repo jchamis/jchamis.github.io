@@ -177,6 +177,10 @@ body {
     top: 0;
     left: 0;
     padding: 2rem;
+    color: #f5f5f5;
+    text-shadow: 0rem 0rem 2rem #1B1B1B;
+    font-family: 'Special Elite', cursive;
+    font-size: 2rem;
 }
 
 .script:hover{
@@ -185,7 +189,7 @@ body {
 }
 
 .script:hover .script-img{
-    opacity: 0;
+    opacity: 0.5;
     transition: 0.4s;
 }
 
