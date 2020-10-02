@@ -17,6 +17,7 @@ body {
   margin: 5%;
   background-color: #1B1B1B;
   box-shadow: 0px 0px 10px 10px black;
+  border-radius: 1rem
 }
 
 /* Button Styles*/
@@ -31,6 +32,10 @@ body {
     transition: 0.3s;
 }
 
+.btn:focus{
+    outline: none;
+}
+
 .btn:hover {
     background-color: #4d4d4d;
     color: white;
@@ -40,7 +45,7 @@ body {
 
 .nav-btn {
     color: #f5f5f5;
-    text-shadow: 0rem 0rem 1rem #1B1B1B;
+    text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
     margin-left: 1rem;
 }
 
@@ -66,24 +71,26 @@ body {
     max-width: auto;
     max-height: 100%;
     padding: 2rem;
-    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    'short-info-container image-container';
+    'image-container'
+    'title-container';
     background-image: url(images/header-images/Typewriter.png);
     background-position: center;
     background-size: cover;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 1rem 1rem 0rem 0rem;
 }
 
-/*Contains titles, bio, logo*/
-#short-info-container{
+/*Contains titles, picture of self, logo, and profession*/
+#title-container{
     display: grid;
-    grid-template-rows: .75fr .75fr 6fr;
-    grid-template-columns: 25% 75%;
+    grid-template-rows: 4rem 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    'logo-image    name-title         '
-    'logo-image    screenwriter-title '
-    'about-me-hook about-me-hook      ';
+    'logo-image         .          '
+    'name-title         self-image '
+    'screenwriter-title self-image ';
+    
 }
 
 #logo-image{
@@ -93,53 +100,49 @@ body {
     align-self: center;
 }
 
+/*self image*/
+#self-image {
+    grid-area: self-image;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    border: .3rem solid #1B1B1B;
+    background-color: #1B1B1B;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #name-title{
     grid-area: name-title;
-    align-self: center;
     justify-self: center;
-    font-size: 3rem;
+    align-self: flex-end;
+    font-size: 4rem;
     font-family: 'IM Fell English', serif;
-    color: #1B1B1B;
-    text-shadow: 1px 1px 1px #8A0303;
+    color: #f5f5f5;
+    text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
+    padding-right: 2rem;
 }
 
 #screenwriter-title{
     grid-area: screenwriter-title;
-    align-self: center;
     justify-self: center;
-    font-size: 1.5rem;
+    align-self: flex-start;
+    font-size: 3rem;
     font-family: 'Creepster', cursive;
-    color: #8A0303;
-    text-shadow: 1px 1px 1px #1B1B1B;
-    padding-top: .5rem;
-    margin-bottom: 2rem;
+    color: #f5f5f5;
+    text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
+    padding-right: 2rem;
 }
 
 #about-me-hook {
     grid-area: about-me-hook;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-family: 'Special Elite', cursive;
     margin-top: 2rem;
     background-color: #f5f5f5;
     border: .3rem solid #1B1B1B;
     border-radius: 1rem;
     padding: 1rem;
-    margin-bottom: 3rem;
-}
-
-/*Contains self image*/
-#image-container {
-    justify-self: center;
-    align-self: center;
-}
-
-/*self image*/
-#self-image {
-    border-radius: 50%;
-    border: .3rem solid #1B1B1B;
-    background-color: #1B1B1B;
-    max-width: 100%;
-    max-height: 100%;
 }
 
 /*Contains nav bar buttons*/
@@ -167,6 +170,7 @@ body {
     row-gap: 2rem;
     justify-items: center;
     align-items: center;
+    object-fit: contain;
 }
 
 .script-title{
@@ -185,9 +189,9 @@ body {
 
 .script-text {
     position: absolute;
-    opacity: 0;
     top: 0;
     left: 0;
+    opacity: 0;
     padding: 2rem;
     color: #f5f5f5;
     text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
