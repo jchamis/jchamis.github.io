@@ -75,7 +75,12 @@ body {
     grid-template-areas: 
     'image-container'
     'title-container';
-    background-image: url(images/header-images/Typewriter.png);
+    background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(images/header-images/Typewriter.png);
     background-position: center;
     background-size: cover;
     border-radius: 1rem 1rem 0rem 0rem;
@@ -90,7 +95,6 @@ body {
     'logo-image         .          '
     'name-title         self-image '
     'screenwriter-title self-image ';
-    
 }
 
 #logo-image{
@@ -118,8 +122,8 @@ body {
     align-self: flex-end;
     font-size: 4rem;
     font-family: 'IM Fell English', serif;
-    color: #f5f5f5;
-    text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
+    color: #1B1B1B;
+    text-shadow: -.05rem 0 #f5f5f5, 0 .05rem #f5f5f5, .05rem 0 #f5f5f5, 0 -.05rem #f5f5f5;
     padding-right: 2rem;
 }
 
@@ -129,7 +133,7 @@ body {
     align-self: flex-start;
     font-size: 3rem;
     font-family: 'Creepster', cursive;
-    color: #f5f5f5;
+    color: #8A0303;
     text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
     padding-right: 2rem;
 }
