@@ -14,10 +14,9 @@ body {
     'nav-bar-container'
     'scripts-container'
     'contact-container';
-  margin: 5%;
+  margin: 0rem 2.5rem 0rem 2.5rem;
   background-color: #1B1B1B;
   box-shadow: 0px 0px 10px 10px black;
-  border-radius: 1rem
 }
 
 /* Button Styles*/
@@ -73,8 +72,8 @@ body {
     padding: 2rem;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    'image-container'
-    'title-container';
+    'title-container'
+    'short-info-container';
     background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -89,10 +88,9 @@ body {
 /*Contains titles, picture of self, logo, and profession*/
 #title-container{
     display: grid;
-    grid-template-rows: 4rem 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    'logo-image         .          '
     'name-title         self-image '
     'screenwriter-title self-image ';
 }
@@ -122,8 +120,8 @@ body {
     align-self: flex-end;
     font-size: 4rem;
     font-family: 'IM Fell English', serif;
-    color: #1B1B1B;
-    text-shadow: -.05rem 0 #f5f5f5, 0 .05rem #f5f5f5, .05rem 0 #f5f5f5, 0 -.05rem #f5f5f5;
+    color: #f5f5f5;
+    text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
     padding-right: 2rem;
 }
 
@@ -133,7 +131,7 @@ body {
     align-self: flex-start;
     font-size: 3rem;
     font-family: 'Creepster', cursive;
-    color: #8A0303;
+    color: #f5f5f5;
     text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
     padding-right: 2rem;
 }
@@ -201,6 +199,10 @@ body {
     text-shadow: -.05rem 0 #1B1B1B, 0 .05rem #1B1B1B, .05rem 0 #1B1B1B, 0 -.05rem #1B1B1B;
     font-family: 'Special Elite', cursive;
     font-size: 2rem;
+}
+
+.ritual-x-script-text {
+    font-size: 1.7rem;
 }
 
 .script:hover{
