@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jon Chamis</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" async></script>
 
     <!--Fonts-->
         <!--Subtitle Font-->
@@ -70,35 +71,35 @@
         <div class="script caging-the-gods">
             <img class="script-img" src='images/scripts-images/caging-the-gods/caging-the-gods.png' alt="Caging the Gods Poster">
             <div class="script-text">An exploration of the origins of religion through the surreal nightmare of a crash landed alien turned star cult messiah.</div>
-            <button class="btn script-btn caging-the-gods-summary-btn" type="button">READ MORE</button>
+            <button class="btn script-btn" id="caging-the-gods-summary-btn" type="button">READ MORE</button>
         </div>
 
         <!--Hershell's Hill Container-->
         <div class="script hershells-hill">
             <img class="script-img hershells-hill-img" src='images/scripts-images/hershells-hill/hershells-hill.png' alt="Hershell's Hill Poster">
             <div class="script-text">A soldier returns home from war to bury her father only to come under fire from a maniac sniper on a family camping trip.</div>
-            <button class="btn script-btn hershells-hill-summary-btn" type="button">READ MORE</button>
+            <button class="btn script-btn" id="hershells-hill-summary-btn" type="button">READ MORE</button>
         </div>
 
         <!--Night Stocker Container-->
         <div class="script night-stocker">
             <img class="script-img night-stocker-img" src='images/scripts-images/night-stocker/night-stocker.png' alt="Night Stocker Poster">
             <div class="script-text">A lovelorn night clerk descends into madness after discovering a neighborhood vampire and courting her evil intentions.</div>
-            <button class="btn script-btn night-stocker-summary-btn" type="button">READ MORE</button>
+            <button class="btn script-btn" id="night-stocker-summary-btn" type="button">READ MORE</button>
         </div>
 
         <!--Satan's Pride Container-->
         <div class="script satans-pride">
             <img class="script-img satans-pride-img" src='images/scripts-images/satans-pride/satans-pride.png' alt="Satan's Pride Poster">
             <div class="script-text">Two brothers embark on a motorcycle trip only to get stranded in a backwoods town terrorised by a local werewolf biker gang.</div>
-            <button class="btn script-btn satans-pride-summary-btn" type="button">READ MORE</button>
+            <button class="btn script-btn" id="satans-pride-summary-btn" type="button">READ MORE</button>
         </div>
 
         <!--Ritual X Container-->
         <div class="script ritual-x">
             <img class="script-img ritual-x-img" src='images/scripts-images/ritual-x/ritual-x.png' alt="Ritual X Poster">
             <div class="script-text ritual-x-script-text">A podcaster in search of his break through episode accompanies his friends to a spring break music festival only to uncover an occult conspiracy looming behind the curtains.</div>
-            <button class="btn script-btn ritual-x-summary-btn" type="button">READ MORE</button>
+            <button class="btn script-btn" id="ritual-x-summary-btn" type="button">READ MORE</button>
         </div>
 
     </div>
@@ -108,11 +109,14 @@
     <!--Caging the Gods Summary-->
     <div class="script-modal caging-the-gods-modal">
 
+        <!--Close button-->
+        <span class="close-btn">&times;</span>
+
         <!--Title-->
         <div class="summary-title">Caging the Gods</div>
 
         <!--Content-->
-        <div class="summary-content caging-the-gods-summary">
+        <div class="summary-content">
             Trapped in a fever dream fusion of Jodorosky's The Mountain and Martyrs, Caging The Gods is a gruesome metaphor that questions the difference between insanity and faith, sadism and mercy. A miracle and a curse.
             <br><br>
             On the night of Xalo's star, an astrological event awaited by Herbert Welsch and his followers (The Star of Xalo), a suicide ritual consecrates the summoning of an intergalactic being.
@@ -123,7 +127,10 @@
     
     <!--Hershell's Hill Summary-->
     <div class="script-modal hershells-hill-modal">
-        
+
+        <!--Close button-->
+        <span class="close-btn">&times;</span>
+
         <!--Title-->
         <div class="summary-title">Hershell's Hill</div>
 
@@ -131,7 +138,7 @@
         <img class="summary-award" src="images/scripts-images/hershells-hill/hershells-hill-award.png">
 
         <!--Content-->
-        <div class="summary-content hershells-hill-summary">
+        <div class="summary-content">
             Herschel’s Hill is a slasher-with-a-gun focused on mature character dynamics and themes that heighten brutal slasher fanfare. In a blend of Jacob’s Ladder and Friday The 13th, Herschell’s Hill follows a group of soldiers under fire from an undead maniac sniper who terrorizes a local hiking trail.
             <br><br>
             Amanda McKinley is a sergeant in the U.S Army Corp returned from Afghanistan and accompanied by her squadmates Brady (her boyfriend) and Knox (his buddy). To reunite with her sister, Sarah, Amanda agrees to take a hiking trip up to her recently deceased father's cabin to spread his ashes. Problems arise when they lose their bearings and stumble into a haunted area called Herschell’s Hill--a place that locals have avoided since the early 1900’s when a murdered boy named Herschell came back from the dead to kill all the townsfolk. Amanda takes charge to get them back on track and up to the cabin, but it feels off. Besides things being out of place, mysterious notes are discovered in her father's journal, which convinces Sarah that her dad had not killed himself, but was murdered. Amanda dismisses her overly emotional sister’s worries--that is until she gets pinned down by sniper fire. From here, Amanda does her best to lead her troop through the forest and out to safety. However, this is Herschell’s Hill and his aim is true. Amanda’s strength is tested as Herschell picks off her troop one by one and captures her, where she realizes that Herschell’s objective isn’t just to kill but to take the child growing in her womb.
@@ -142,6 +149,9 @@
     <!--Night Stocker Summary-->
     <div class="script-modal night-stocker-modal">
 
+            <!--Close button-->
+            <span class="close-btn">&times;</span>
+
             <!--Title-->
             <div class="summary-title">Night Stocker</div>
 
@@ -149,7 +159,7 @@
             <img class="summary-award" src="images/scripts-images/night-stocker/night-stocker-award.png">
 
             <!--Content-->
-            <div class="summary-content night-stocker-summary">
+            <div class="summary-content">
             Nightstocker is The Graduate meets Fright Night with it’s mix of psycho-drama and traditional vampire lore that create a tone poem that explores love, loss, isolation, fatalism, survivors syndrome and the curse of neighborhood vampire.
             <br><br>
             Andrew is a jobless college dropout who is haunted by the recent loss of his girlfriend Lola, who drowned in a lake in Maine. Andrew finds nothing but misery in his parent’s suburban tract home. Annoyed by his parent’s middle-class prodding to move on with his life, Andrew takes a job as a Nightstocker at a local grocery store where he finds solace in the lonely hours of the night. He spends his free time seeing midnight movies and wandering the neighborhoods. One night, he notices a mysterious red light from a neighbor’s window and returns a few nights later to investigate. Here he meets the seductive, wealthy older woman Elizabeth Speck, who has
@@ -160,6 +170,9 @@
     <!--Satan's Pride Summary-->
     <div class="script-modal satans-pride-modal">
 
+            <!--Close button-->
+            <span class="close-btn">&times;</span>
+
             <!--Title-->
             <div class="summary-title">Satan's Pride</div>
 
@@ -167,7 +180,7 @@
             <img class="summary-award" src="images/scripts-images/satans-pride/satans-pride-award.png">
 
             <!--Content-->
-            <div class="summary-content satans-pride-summary">
+            <div class="summary-content">
             Staining the roads red and howling under the harvest moon, Satan’s Pride is fuel injected biker exploitation and traditional werewolf lore akin to Easy Rider meets The Howling. Fast, loud and mean this werewolf horror examines the beast within man and gnashes its teeth at the question of carnal innocence.
             <br><br>
             Mitch is a recently divorced father who mourns the loss of his father with his brother Bryan. Together they’ve embarked on a road trip to free themselves to their twin pipe steers and the open road. But trouble rolls into town when they encounter local menace Ryke and his biker gang Satan’s Pride. Words lead to fists and the brothers soon find themselves pursued by the gang and are harassed into violent confrontation that draws the attention of local law. Sheriff Bordough chases off the local trouble but informs the brothers they shouldn’t stick around here.
@@ -179,6 +192,9 @@
     <!--Ritual X Summary-->
     <div class="script-modal ritual-x-modal">
 
+            <!--Close button-->
+            <span class="close-btn">&times;</span>
+
             <!--Title-->
             <div class="summary-title">Ritual X</div>
 
@@ -186,7 +202,7 @@
             <img class="summary-award" src="images/scripts-images/ritual-x/ritual-x-award.png">
 
             <!--Content-->
-            <div class="summary-content ritual-x-summary">
+            <div class="summary-content">
             A horror destination experience akin to The Blair Witch Project meets Project X with a vibrant concert experience that becomes the hunting grounds of a group of cultists and their A.I figurehead known as The Father. Kenneth Stranger is the host of America Makes Weird, a podcast dedicated to discovering the strangeness of our own realities but lacks a serious viewer count to qualify on any radar. In hopes of finding his break through episode Kenneth accompanies his friends to a Burning Man-esque spring break festival and along the way pick up a hitchhiker named Zarathustra. She tells them something big is awaiting them at the festival and reveals she belongs to a spiritual movement called the Neologians. Immediately captivated by her, Kenneth splits his time between drug induced follies with friends and pursuing Zarathustra for an interview for his show. She agrees to not only interview but introduce Kenneth into the Neologian and meet the one they call Father. As Kenneth records, he is drawn into a much larger occult conspiracy at play as Zarathustra tells him he will be “The Witness” to The Great Upload, a mass-death ritual to be carried out upon the unsuspecting patrons of the spring break music festival. If only Kenneth hadn’t gotten so close, he may be able to save both his friends and possibly the world...
             </div>
     
