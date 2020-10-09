@@ -69,10 +69,16 @@ body {
 
 /* Modal close button */
 .close-btn {
-  float: right; 
+  display: flex;
+  grid-area: close-btn;
+  flex-direction: row-reverse;
+  height: 100%;
+  width: 100%;
   color: lightgray; 
   font-size: 24px;  
   font-weight: bold;
+  background-color: #f5f5f5;
+  padding: 1.5rem 1.5rem 0rem 0rem;
 }
 
 .close-btn:hover {
@@ -244,24 +250,48 @@ body {
 
 /* The Modal (background) */
 .script-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 7rem auto;
+  grid-template-areas:
+  'summary-title   summary-award   close-btn      '
+  'summary-content summary-content summary-content';
+  width: 100%; 
+  height: 100%;
+  padding: 5rem;  
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Title */
+.summary-title {
+    grid-area: summary-title;
+    background-color: #f5f5f5;
+    padding: 1.5rem 0rem 0rem 1.5rem;
+    font-size: 3rem;
+    font-family: 'IM Fell English', serif;
+}
+
+/* Modal Award */
+.summary-award {
+    display: flex;
+    grid-area: summary-award;
+    background-color: #f5f5f5;
+    padding: 1.5rem 0rem 0rem 0rem;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
 }
 
 /* Modal Content/Box */
 .summary-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+    grid-area: summary-content;
+    background-color: #f5f5f5;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    font-size: 1.1rem;
+    font-family: 'Special Elite', cursive;
 }
