@@ -69,19 +69,21 @@ body {
 
 /* Modal close button */
 .close-btn {
-  display: flex;
-  grid-area: close-btn;
-  flex-direction: row-reverse;
-  height: 100%;
-  width: 100%;
+  display: none;
+  position: fixed;
+  float: right;
+  z-index: 52;
   color: lightgray; 
   font-size: 24px;  
   font-weight: bold;
+  transform: scale(.8rem);
 }
 
 .close-btn:hover, .close-btn:focus {
   color: darkgray;
   cursor: pointer;
+  transform: scale(1.5);
+  transition: .3s;
 }
 
 /*Header, contains bio, titles, and image of self*/
@@ -222,7 +224,7 @@ body {
 }
 
 .ritual-x-script-text {
-    font-size: 1.7rem;
+    font-size: 1.79rem;
 }
 
 .script:hover{
@@ -266,38 +268,48 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 100vh;
+  width: 90%;
+  height: 90%;
   transform: translate(-50%, -50%);
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-  'summary-title   summary-award   close-btn      '
-  'summary-content summary-content summary-content';
-  padding: 5rem;
+  'summary-title   summary-award   '
+  'summary-content summary-content ';
+  padding: 2rem;
+  margin: 0 auto;
   z-index: 51; 
   background-color: #f5f5f5;
+  border: .3rem solid #1B1B1B;
+  border-radius: 25px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 /* Modal Title */
 .summary-title {
     grid-area: summary-title;
-    font-size: 3rem;
+    font-size: 5rem;
     font-family: 'IM Fell English', serif;
+    justify-self: center;
+    align-self: center;
+    padding-right: 2rem;
 }
 
 /* Modal Award */
 .summary-award {
     display: flex;
     grid-area: summary-award;
-    height: 100%;
-    width: 100%;
+    height: 6rem;
+    width: 6rem;
     object-fit: contain;
+    align-self: center;
 }
 
 /* Modal Content/Box */
 .summary-content {
     grid-area: summary-content;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-family: 'Special Elite', cursive;
+    padding-bottom: 2rem;
 }

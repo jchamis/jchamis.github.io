@@ -13,79 +13,69 @@ let satansPrideModal    = document.querySelector( ".satans-pride-modal"    ); //
 let ritualXModal        = document.querySelector( ".ritual-x-modal"        ); // Modal for Ritual X
 
 //Modal overlay
-let modalOverlay = document.querySelector( ".modal-overlay" ) // Modal Overlay
+let modalOverlay = document.querySelector( ".modal-overlay" ); // Modal Overlay
 
 //Modal close button
 let closeBtn = document.querySelector( ".close-btn" ); // Close button in modal
 
 //Modal Functions
 
+// Close Button
+closeBtn.onclick = function () {
+    cagingTheGodsModal.style.display = "none";
+    hershellsHillModal.style.display = "none";
+    nightStockerModal.style.display  = "none";
+    satansPrideModal.style.display   = "none";
+    ritualXModal.style.display       = "none";
+    modalOverlay.style.display       = "none";
+    closeBtn.style.display           = "none";
+};
+
+// Click off modal
+window.onclick = function ( e ) {
+    if ( e.target === modalOverlay ) {
+        cagingTheGodsModal.style.display = "none";
+        hershellsHillModal.style.display = "none";
+        nightStockerModal.style.display  = "none";
+        satansPrideModal.style.display   = "none";
+        ritualXModal.style.display       = "none";
+        modalOverlay.style.display       = "none";
+        closeBtn.style.display           = "none";
+    }
+};
+
+
 //Caging the Gods modal functions
 cagingTheGodsModalBtn.onclick = function () {
     cagingTheGodsModal.style.display = "grid";
-    modalOverlay.style.display = "block";
-};
-closeBtn.onclick = function () {
-    cagingTheGodsModal.style.display = "none";
-};
-window.onclick = function ( e ) {
-    if ( e.target == cagingTheGodsModal ) {
-        cagingTheGodsModal.style.display = "none";
-    }
+    modalOverlay.style.display       = "block";
+    closeBtn.style.display           = "block";
 };
 
 //Hershell's Hill modal functions
 hershellsHillModalBtn.onclick = function () {
     hershellsHillModal.style.display = "grid";
-    modalOverlay.style.display = "block";
-};
-closeBtn.onclick = function () {
-    hershellsHillModal.style.display = "none";
-};
-window.onclick = function ( e ) {
-    if ( e.target == hershellsHillModal ) {
-        hershellsHillModal.style.display = "none";
-    }
+    modalOverlay.style.display       = "block";
+    closeBtn.style.display           = "block"
 };
 
 //Night Stocker modal functions
 nightStockerModalBtn.onclick = function () {
     nightStockerModal.style.display = "grid";
-    modalOverlay.style.display = "block";
-};
-closeBtn.onclick = function () {
-    nightStockerModal.style.display = "none";
-};
-window.onclick = function ( e ) {
-    if ( e.target == nightStockerModal ) {
-        nightStockerModal.style.display = "none";
-    }
+    modalOverlay.style.display      = "block";
+    closeBtn.style.display          = "block"
 };
 
 //Satan's Pride modal functions
 satansPrideModalBtn.onclick = function () {
     satansPrideModal.style.display = "grid";
-    modalOverlay.style.display = "block";
-};
-closeBtn.onclick = function () {
-    satansPrideModal.style.display = "none";
-};
-window.onclick = function ( e ) {
-    if ( e.target == satansPrideModal ) {
-        satansPrideModal.style.display = "none";
-    }
+    modalOverlay.style.display     = "block";
+    closeBtn.style.display         = "block"
 };
 
 //Ritual X modal functions
 ritualXModalBtn.onclick = function () {
     ritualXModal.style.display = "grid";
     modalOverlay.style.display = "block";
-};
-closeBtn.onclick = function () {
-    ritualXModal.style.display = "none";
-};
-window.onclick = function ( e ) {
-    if ( e.target == ritualXModal ) {
-        ritualXModal.style.display = "none";
-    }
+    closeBtn.style.display     = "block"
 };
