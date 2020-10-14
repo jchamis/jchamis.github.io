@@ -71,7 +71,6 @@ body {
 .close-btn {
   grid-area: close-btn;
   position: fixed;
-  float: right;
   color: lightgray; 
   font-size: 2rem;  
   font-weight: bold;
@@ -248,7 +247,6 @@ body {
 }
 
 /* Modal Overlay */ 
-
 .modal-overlay {
   display: none;
   position: fixed;
