@@ -28,7 +28,6 @@ closeBtn.onclick = function () {
     satansPrideModal.style.display   = "none";
     ritualXModal.style.display       = "none";
     modalOverlay.style.display       = "none";
-    closeBtn.style.display           = "none";
 };
 
 // Click off modal
@@ -40,7 +39,6 @@ window.onclick = function ( e ) {
         satansPrideModal.style.display   = "none";
         ritualXModal.style.display       = "none";
         modalOverlay.style.display       = "none";
-        closeBtn.style.display           = "none";
     }
 };
 
@@ -49,33 +47,29 @@ window.onclick = function ( e ) {
 cagingTheGodsModalBtn.onclick = function () {
     cagingTheGodsModal.style.display = "grid";
     modalOverlay.style.display       = "block";
-    closeBtn.style.display           = "block";
 };
 
 //Hershell's Hill modal functions
 hershellsHillModalBtn.onclick = function () {
     hershellsHillModal.style.display = "grid";
     modalOverlay.style.display       = "block";
-    closeBtn.style.display           = "block"
 };
 
 //Night Stocker modal functions
 nightStockerModalBtn.onclick = function () {
     nightStockerModal.style.display = "grid";
     modalOverlay.style.display      = "block";
-    closeBtn.style.display          = "block"
 };
 
 //Satan's Pride modal functions
 satansPrideModalBtn.onclick = function () {
     satansPrideModal.style.display = "grid";
     modalOverlay.style.display     = "block";
-    closeBtn.style.display         = "block"
 };
 
 //Ritual X modal functions
 ritualXModalBtn.onclick = function () {
     ritualXModal.style.display = "grid";
     modalOverlay.style.display = "block";
-    closeBtn.style.display     = "block"
+
 };
