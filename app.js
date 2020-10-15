@@ -12,23 +12,18 @@ let nightStockerModal  = document.querySelector( ".night-stocker-modal"   ); // 
 let satansPrideModal   = document.querySelector( ".satans-pride-modal"    ); // Modal for Satan's Pride
 let ritualXModal       = document.querySelector( ".ritual-x-modal"        ); // Modal for Ritual X
 
+// Summary Close Buttons
+let cagingTheGodsCloseBtn = document.querySelector (" .caging-the-gods-close-btn" ) // Close Button for Caging the Gods
+let hershellsHillCloseBtn = document.querySelector (" .hershells-hill-close-btn"  ) // Close Button for Hershell's Hill
+let nightStockerCloseBtn  = document.querySelector (" .night-stocker-close-btn"   ) // Close Button for Night Stocker
+let satansPrideCloseBtn   = document.querySelector (" .satans-pride-close-btn"    ) // Close Button for Satan's Pride
+let ritualXCloseBtn       = document.querySelector (" .ritual-x-close-btn"        ) // Close Button for Ritual X
+
+
 // Modal overlay
 let modalOverlay = document.querySelector( ".modal-overlay" ); // Modal Overlay
 
-// Modal close button
-let closeBtn     = document.querySelector( ".close-btn" ); // Close button in modal
-
 // Modal Functions
-
-// Close Button
-closeBtn.onclick = function () {
-    cagingTheGodsModal.style.display = "none";
-    hershellsHillModal.style.display = "none";
-    nightStockerModal.style.display  = "none";
-    satansPrideModal.style.display   = "none";
-    ritualXModal.style.display       = "none";
-    modalOverlay.style.display       = "none";
-};
 
 // Click off modal
 window.onclick = function ( e ) {
@@ -70,5 +65,37 @@ satansPrideModalBtn.onclick = function () {
 ritualXModalBtn.onclick = function () {
     ritualXModal.style.display = "grid";
     modalOverlay.style.display = "block";
-
 };
+
+// Close Button Functions
+
+// Caging the Gods Close Button
+cagingTheGodsCloseBtn.onclick = function () {
+    cagingTheGodsModal.style.display = "none";
+    modalOverlay.style.display       = "none";
+};
+
+// Hershell's Hill Close Button
+hershellsHillCloseBtn.onclick = function () {
+    hershellsHillModal.style.display = "none";
+    modalOverlay.style.display       = "none";
+};
+
+// Night Stocker Close Button
+nightStockerCloseBtn.onclick = function () {
+    nightStockerModal.style.display = "none";
+    modalOverlay.style.display = "none";
+};
+
+// Satan's Pride Close Button
+satansPrideCloseBtn.onclick = function () {
+    satansPrideModal.style.display = "none";
+    modalOverlay.style.display = "none";
+};
+
+// Ritual X Close Button
+ritualXCloseBtn.onclick = function () {
+    ritualXModal.style.display = "none";
+    modalOverlay.style.display = "none";
+};
+
