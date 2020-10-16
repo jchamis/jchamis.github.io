@@ -19,11 +19,18 @@ let nightStockerCloseBtn  = document.querySelector (" .night-stocker-close-btn" 
 let satansPrideCloseBtn   = document.querySelector (" .satans-pride-close-btn"    ) // Close Button for Satan's Pride
 let ritualXCloseBtn       = document.querySelector (" .ritual-x-close-btn"        ) // Close Button for Ritual X
 
+// Nav Bar Buttons
+let aboutBtn   = document.querySelector ( ".nav-about-btn"   ) // About Nav Bar Button
+let scriptsBtn = document.querySelector ( ".nav-scripts-btn" ) // Scripts Nav Bar Button
+let contactBtn = document.querySelector ( ".nav-contact-btn" ) // Contact Nav Bar Button
+
+// Nav Locations
+let aboutLocation = document.getElementById ( "title-container" ) // About Section
 
 // Modal overlay
 let modalOverlay = document.querySelector( ".modal-overlay" ); // Modal Overlay
 
-// Modal Functions
+// Modal Functions // 
 
 // Click off modal
 window.onclick = function ( e ) {
@@ -67,7 +74,7 @@ ritualXModalBtn.onclick = function () {
     modalOverlay.style.display = "block";
 };
 
-// Close Button Functions
+// Close Button Functions //
 
 // Caging the Gods Close Button
 cagingTheGodsCloseBtn.onclick = function () {
@@ -99,3 +106,8 @@ ritualXCloseBtn.onclick = function () {
     modalOverlay.style.display = "none";
 };
 
+// Nav Bar Functions //
+
+aboutBtn.onclick = function () {
+    aboutLocation.scrollIntoView({behavior: "smooth", block: "end"})
+}
