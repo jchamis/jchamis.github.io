@@ -25,7 +25,8 @@ let scriptsBtn = document.querySelector ( ".nav-scripts-btn" ) // Scripts Nav Ba
 let contactBtn = document.querySelector ( ".nav-contact-btn" ) // Contact Nav Bar Button
 
 // Nav Locations
-let aboutLocation = document.getElementById ( "title-container" ) // About Section
+let aboutLocation   = document.getElementById ( "title-container"   ) // About Section
+let scriptsLocation = document.getElementById ( "scripts-container" ) // Scripts Section
 
 // Modal overlay
 let modalOverlay = document.querySelector( ".modal-overlay" ); // Modal Overlay
@@ -108,6 +109,12 @@ ritualXCloseBtn.onclick = function () {
 
 // Nav Bar Functions //
 
-aboutBtn.onclick = function () {
-    aboutLocation.scrollIntoView({behavior: "smooth", block: "end"})
+//About Button
+aboutBtn.onclick = function (e) {
+    aboutLocation.scrollIntoView(true)
+}
+
+//Scripts Button
+scriptsBtn.onclick = function (e) {
+    scriptsLocation.scrollIntoView(true)
 }
