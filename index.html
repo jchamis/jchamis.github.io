@@ -247,13 +247,26 @@
       <div id="footer-title">Questions or Comments? Get In Touch:</div>
       <!--Footer Input Text Boxes-->
       <div id="footer-inputs">
-        <input type="text" id="footer-input-name" placeholder=" Name" />
-        <input type="text" id="footer-input-email" placeholder=" Email" />
-        <!--Footer Input Text Area-->
-        <textarea type="textarea" id="footer-input-textarea" placeholder=" Message"></textarea>
-        <!--Footer Input Button-->
-        <button type="button" id="footer-input-button">SEND MESSAGE</button>
+          
+        <!--Contact Form-->
+        <form action="https://formspree.io/f/mrgokpwv" method="POST">
+
+            <label>
+                <input type="text" id="footer-input-name" name="name" placeholder=" Name">
+            </label>
+
+            <label>
+                <input type="text" id="footer-input-email" name="_replyto" placeholder=" Email">
+            </label>
+
+            <label>
+                <textarea type="textarea" id="footer-input_textarea" name="message" placeholder=" Message"></textarea>
+            </label>
+
+            <button type="submit" id="footer-input-button">SEND MESSAGE</button>
+    </form>
       </div>
+
 
 </body>
 </html>

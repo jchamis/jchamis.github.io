@@ -27,6 +27,7 @@ let contactBtn = document.querySelector ( ".nav-contact-btn" ) // Contact Nav Ba
 // Nav Locations
 let aboutLocation   = document.getElementById ( "title-container"   ) // About Section
 let scriptsLocation = document.getElementById ( "scripts-container" ) // Scripts Section
+let contactLocation = document.getElementById ( "footer-container"  ) // Contact Section
 
 // Modal overlay
 let modalOverlay = document.querySelector( ".modal-overlay" ); // Modal Overlay
@@ -118,3 +119,8 @@ aboutBtn.onclick = function (e) {
 scriptsBtn.onclick = function (e) {
     scriptsLocation.scrollIntoView(true)
 }
+
+//Contact Button
+contactBtn.onclick = function ( e ) {
+    contactLocation.scrollIntoView( true );
+};
