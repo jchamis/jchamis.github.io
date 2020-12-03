@@ -13,7 +13,7 @@ body {
     'nav-bar-container'
     'header-container '
     'scripts-container'
-    'footer-container';
+    'footer-container ';
   margin: 0rem 2.5rem 0rem 2.5rem;
   background-color: #1B1B1B;
   box-shadow: 0px 0px 10px 10px black;
@@ -281,7 +281,7 @@ body {
   grid-template-rows: auto auto auto;
   grid-template-areas:
   '.               .               close-btn      '
-  'summary-title   summary-award   .              '
+  'summary-title   summary-award   summary-award  '
   'summary-content summary-content summary-content';
   padding: 2rem;
   margin: 0 auto;
@@ -302,23 +302,34 @@ body {
     padding-right: 2rem;
 }
 
-/* Modal Award */
 .summary-award {
+  grid-area: summary-award;
+  display: flex;
+  justify-self: flex-end;
+}
+
+/* Modal Award Images */
+.summary-award-img {
     display: flex;
     grid-area: summary-award;
-    height: 9rem;
-    width: 9rem;
+    height: 10rem;
+    width: 10rem;
     object-fit: contain;
     align-self: center;
-    justify-self: flex-end;
     padding-bottom: 1rem;
+}
+
+
+#satans-pride-award {
+  height: 12rem;
+  width: 12rem;
 }
 
 /* Modal Content/Box */
 .summary-content {
     grid-area: summary-content;
     font-size: 1.5rem;
-    font-family: 'Special Elite', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 2rem;
     overflow: scroll;
     overflow-x: hidden;
@@ -328,21 +339,16 @@ body {
 #footer-container {
     display: grid;
     grid-area: footer-container;
-    grid-template-columns: 1fr;
     grid-template-rows: 5rem 1fr;
     grid-template-areas:
         'footer-title '
         'footer-inputs';
     gap: 1rem 1rem;
     padding: 2rem;
-    justify-self: center;
-    background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(images/header-images/Typewriter.png);
-    background-position: center;
+    
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.34'%3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -371,7 +377,6 @@ body {
   gap: 1rem 1rem;
   justify-self: center;
 }
-
 
 #footer-input-name {
   display: flex;
